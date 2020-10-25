@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewSocialNetwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#009688"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/viewVerticalLine"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="#FF9800"
+            app:layout_constraintBottom_toBottomOf="@id/viewSocialNetwork"
+            app:layout_constraintEnd_toStartOf="@+id/viewSocialNetwork"
+            app:layout_constraintTop_toTopOf="@+id/viewSocialNetwork" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/viewSocialNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/iconFacebook"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintEnd_toStartOf="@+id/txtIdFacebook"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/facebook_icon"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/iconInstgram"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/txtIdInstgram"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconFacebook"
+                app:srcCompat="@drawable/instagram_icon" />
+
+            <ImageView
+                android:id="@+id/iconTwitter"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iconInstgram"
+                app:srcCompat="@drawable/twitter_icon" />
+
+            <TextView
+                android:id="@+id/txtIdInstgram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@instgramid"
+                android:textAllCaps="false"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iconInstgram"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/iconInstgram"
+                app:layout_constraintTop_toTopOf="@id/iconInstgram" />
+
+            <TextView
+                android:id="@+id/txtIdFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@facebookid"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iconFacebook"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/iconFacebook"
+                app:layout_constraintTop_toTopOf="@id/iconFacebook" />
+
+            <TextView
+                android:id="@+id/txtIdTwitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@twitterid"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/iconTwitter"
+                app:layout_constraintStart_toEndOf="@+id/iconTwitter"
+                app:layout_constraintTop_toTopOf="@+id/iconTwitter" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtBusinessName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="App Development"
+            android:textAllCaps="true"
+            android:textColor="#FF9800"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/viewSocialNetwork"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="Awesome Company"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/txtBusinessName"
+            app:layout_constraintTop_toBottomOf="@+id/txtBusinessName" />
+
+        <TextView
+            android:id="@+id/txtWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="http://www.awesomecompany.com"
+            android:textColor="#FFFFFF"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="@+id/txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
+
+        <TextView
+            android:id="@+id/txtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="E: info@awesomecompany.com"
+            android:textColor="#FFFFFF"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="@+id/txtCompanyName"
+            app:layout_constraintTop_toBottomOf="@+id/txtCompanyName"
+            tools:layout_constraintBottom_toTopOf="@id/txtPhone" />
+
+        <TextView
+            android:id="@+id/txtPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="T: 123 456 789"
+            android:textColor="#FFFFFF"
+            android:textSize="8sp"
+            app:layout_constraintStart_toStartOf="@+id/txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
